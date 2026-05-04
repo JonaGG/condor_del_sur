@@ -84,13 +84,7 @@ Proceso para tarea puntual. Nace cuando se crea una reserva, duerme 30 segundos 
 No es un proceso. Es un módulo helper con funciones que facilitan la comunicación con `FlightServer` — envían mensajes y esperan la respuesta. Útil para interactuar con el sistema desde `iex` o desde la demo.
 
 ---
-## Uso de `register` y `monitor`
 
-**`register`**: `FlightServer` se registra con `:flight_server` y `AuditServer` con `:audit_server`. Esto permite que cualquier proceso les mande mensajes por nombre sin necesitar su PID.
-
-**`monitor`**: `AuditServer` monitorea a `FlightServer`. Si `FlightServer` cae, `AuditServer` recibe un mensaje `{:DOWN, ...}` y registra el evento crítico.
-
----
 ## Estructura del proyecto
 
 ```
